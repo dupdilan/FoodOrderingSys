@@ -1,0 +1,14 @@
+/*login form get center*/
+.vertical{
+    padding-top: 150px;
+    padding-bottom: 150px;
+    
+}
+/*.radius{border-radius:20px}*/
+
+body{
+   
+    background:url(../../assets/images/loginbak.jpg) no-repeat center center fixed;
+      
+    
+}
