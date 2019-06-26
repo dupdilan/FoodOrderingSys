@@ -11,8 +11,7 @@ if(isset($_POST["btnSubmit"]))
 	$con=$dbobj->getcon();
 	
 	$sql="SELECT * FROM user WHERE userName='$username' AND userType='$uty' AND userPassword='$password' ";
-	$res=mysqli_query($con,$sql)or die
-	("Can not connect with the table ".mysqli_error());
+	$res=mysqli_query($con,$sql)or die("Can not connect with the table ".mysqli_error());
     
 	$nor=mysqli_num_rows($res);
     

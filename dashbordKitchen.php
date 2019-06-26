@@ -26,7 +26,7 @@
                                                // alert(result);
                                                
                                                //$('table#sHold tr#'+trid).remove();
-                                                alert('Updated');
+                                                alert('Updated the Status');
                                                 location.reload();
 
                                         }
@@ -47,7 +47,7 @@
                                                // alert(result);
                                                
                                                //$('table#sHold tr#'+trid).remove();
-                                                alert('Updated');
+                                                alert('Updated the Status');
                                                 location.reload();
 
                                         }
