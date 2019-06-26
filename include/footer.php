@@ -21,9 +21,9 @@
 
 
 
-        <script src="../assets/jquery/jquery-3.2.1.min.js"></script>
-    <script src="../assets/jquery-ui/jquery-ui.min.css"></script>
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/jquery-ui/jquery-ui.min.css"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     
     </body>
 </html>

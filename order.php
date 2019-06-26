@@ -1,7 +1,7 @@
 <?php
 require_once("php_action/function.php");
 ?>
-<?php
+                                                                <?php
                                                                 require_once('php_action/connection.php'); 
                                                                 
                                                                     $dbobj=new dbconnect();
@@ -127,14 +127,14 @@ tr:nth-child(even){background-color: #f2f2f2}
                                         <div class="form-group">
                                             <label for="#" class="col-sm-3 control-label"> Package :</label>
                                             <div class="col-sm-3">
-                                            <select class="form-control" id="package" onchange="setTextFieldPackage(this)">        
+                                            <select class="form-control" id="package" onchange="setTextFieldPackage(this);">        
                                                 <option>Select</option>
                                                         <?php
 					                                       selectPackage();
 				                                        ?>
                                             </select>
                                             </div>
-                                            <input id="txtPackage" type = "hidden" name = "txtPackage" value = "" />
+                                            <input id="txtPackage" type = "hidden" name = "txtPackage" onchange="" value = "" />
                                                     <script  type="text/javascript">
                                                             
                                                             function setTextFieldPackage(ddl) {
@@ -142,19 +142,39 @@ tr:nth-child(even){background-color: #f2f2f2}
                                                                                     }
                         
                                                     </script>
+                                                    <!-- price set -->
+                                       <?php
+                                                                require_once('php_action/connection.php'); 
+                                                                
+                                                                    $dbobj=new dbconnect();
+                                                                    $con=$dbobj->getcon();
+                                                                                    $selectedPackage='package 1';
+                                                                                    //echo $selectedPackage;
+                                                                $sql1 = "select price from packages where packageName='$selectedPackage' ";
+                                                                            $q1 = mysqli_query($con,$sql1);
+                                                                            $row1 = mysqli_fetch_array($q1);
+                                                                        
+                                                                                $price=$row1[0];
+                                                                                //echo $price;
+                                                                          //  $maxid = $row[0]+1;
+                                                                        //  echo $row['uid']  ; 
+                                                                    
+                                                                        $dbobj->close();
+                                                                ?>
+
+                                                   
 
                                             <div class="col-sm-3">
-                                            <input type="number" class="form-control"  id="txtPackagePrice" onchange=""name="txtPackagePrice" value="100" required>
+                                            <input type="number" class="form-control"  id="txtPackagePrice" onchange=""name="txtPackagePrice" value="<?php echo $price; ?>" required>
                                             </div>
                                         </div>
                                        
-
                                        
 
                                         <div class="form-group">
                                             <label for="#" class="col-sm-3 control-label"> Qty:</label>
                                             <div class="col-sm-6">
-                                            <input type="number" class="form-control" id="txtqty" onchange="TotalVal();"name="txtqty" value="#" required>
+                                            <input type="number" class="form-control" id="txtqty" onchange="TotalVal();" name="txtqty" value="#" required>
                                             </div>
                                         </div>
                                             <script type="text/javascript">
@@ -244,7 +264,7 @@ tr:nth-child(even){background-color: #f2f2f2}
                     </div>
 
         </div>  
-
+            </div>
             <div class="row">
                 <div class="col-sm-12">
                 <div class="panel panel-default">

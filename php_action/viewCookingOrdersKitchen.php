@@ -40,11 +40,11 @@
 				}
 				else
 				{
-					echo "Pendding Order DB Empty! ".mysqli_error($con);
+					echo "Cokking Order DB Empty! ".mysqli_error($con);
 				}
 			}
 			else{
-				echo "Order DB could not be Found! ".mysqli_error($con);
+				echo "Cokking Order DB could not be Found! ".mysqli_error($con);
             }
             
             $dbobj->close();

@@ -3,7 +3,7 @@
 	include("connection.php");
     
 
-	//$orderId=$_POST["txtOrderId"];
+	$orderId=$_POST["txtOrderId"];
 	$packageName=$_POST["txtPackage"];
     $packagePrice=$_POST["txtPackagePrice"];
     $qty=$_POST["txtqty"];
@@ -19,7 +19,7 @@
 	$dbobj=new dbconnect();
 	$con=$dbobj->getcon();
 	
-	$sql="INSERT INTO orderdetails(packageName,price,qty,total,orderStatus) VALUES('$packageName','$packagePrice','$qty','$total','$orderStatus')";
+	$sql="INSERT INTO orderdetails(orderID,packageName,price,qty,total,orderStatus) VALUES('$orderId','$packageName','$packagePrice','$qty','$total','$orderStatus')";
 	
 	//executting the sql message
 	$result=mysqli_query($con,$sql) or die("This Order ID is Already added please try another".mysqli_error());
