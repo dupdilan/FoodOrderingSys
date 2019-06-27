@@ -1,4 +1,6 @@
-
+<?php
+//require_once("php_action/session.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -58,7 +60,18 @@
     
     
   </head>
-    <body >
+    <body onload = "JavaScript:AutoRefresh(5000);" >
+            <!-- aut refresh    -->
+    <script type = "text/JavaScript">
+         
+         function AutoRefresh( t ) {
+            setTimeout("location.reload(true);", t);
+         }
+      
+   </script>
+ 
+
+
     <style>
 table {
     border-collapse: collapse;

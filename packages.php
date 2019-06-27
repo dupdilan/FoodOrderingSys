@@ -1,4 +1,6 @@
-
+<?php
+//require_once("php_action/session.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

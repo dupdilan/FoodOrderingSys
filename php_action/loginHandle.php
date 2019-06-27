@@ -23,10 +23,13 @@ if(isset($_POST["btnSubmit"]))
 			
             if($usert=="cashier")
 			{	
+				//Creating sessions and storing values
+				$_SESSION["login"]["userName"]=$username;
 				header("Location:../dashbordCashier.php");
 			}
 			else if($usert=="kitchen"){
-				
+				//Creating sessions and storing values
+				$_SESSION["login"]["userName"]=$username;
 				header("Location:../dashbordKitchen.php");
 			}
 			else{

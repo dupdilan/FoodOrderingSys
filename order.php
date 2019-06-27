@@ -1,4 +1,5 @@
 <?php
+//require_once("php_action/session.php");
 require_once("php_action/function.php");
 ?>
                                                                 <?php

@@ -1,4 +1,6 @@
-
+<?php
+//require_once("php_action/session.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,9 +15,18 @@
     <link type="text/css"  rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
      <link  type="text/css" rel="stylesheet" href="assets/jquery-ui/jquery-ui.min.css"> 
     
+     <!-- aut refresh    -->
+    <script type = "text/JavaScript">
+         
+            function AutoRefresh( t ) {
+               setTimeout("location.reload(true);", t);
+            }
+         
+      </script>
     
   </head>
-    <body >
+    <body onload = "JavaScript:AutoRefresh(5000);" >
+
 
     <style>
 table {
