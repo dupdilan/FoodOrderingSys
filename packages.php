@@ -80,7 +80,7 @@ tr:nth-child(even){background-color: #f2f2f2}
                         <div class="panel-body">
                                     <!--form details -->
                                     
-                                            <form  class="form-horizontal" action="php_action/packageHandle.php" method="POST">
+                                            <form name="frmPackege" class="form-horizontal" action="php_action/packageHandle.php" method="POST">
                                                                 <?php
                                                                 require_once('php_action/connection.php'); 
                                                                 
@@ -101,7 +101,7 @@ tr:nth-child(even){background-color: #f2f2f2}
                                                 <div class="form-group">
                                                         <label for="txtdoctorid" class="col-sm-3 control-label"> Package ID:</label>
                                                         <div class="col-sm-6">
-                                                        <input type="number" class="form-control" id="txtPackageID" disabled name="txtPackageID" value="<?php echo $maxid; ?>" >
+                                                        <input type="number" class="form-control" id="txtPackageID" readonly name="txtPackageID" value="<?php echo $maxid; ?>" >
                                                         </div>
                                                     </div>
 
@@ -127,8 +127,8 @@ tr:nth-child(even){background-color: #f2f2f2}
                                                 
                                             <div class="div-action pull pull-right">
                                                                             <button type="submit" class="btn btn-default"  id="btnAdd" name="btnAdd" value="add"><i class="glyphicon glyphicon-plus"></i> Add a New Package</button>
-                                                                         <!--   <button type="submit" class="btn btn-default"  id="btnedituser" name="btnedituser" value="edituser"><i class="glyphicon glyphicon-pencil"></i>  Edit an Package</button>
--->
+                                                                            <button type="submit" class="btn btn-default"  id="btnUpdate" name="btnUpdate" value="update"><i class="glyphicon glyphicon-pencil"></i>  Update Package</button>
+                                                                            <button type="submit" class="btn btn-default"  id="btnDelete" name="btnDelete" value="delete"><i class="glyphicon glyphicon-trash"></i>  Delete Package</button>
                                                                             <button type="reset" class="btn btn-default"  id="btnclear" name="btnclear" value="clear"><i class="glyphicon glyphicon-remove"></i> Clear</button>
                                                                         </div>
                                                     
@@ -192,3 +192,21 @@ tr:nth-child(even){background-color: #f2f2f2}
 <?php 
     require_once("include/footer.php");
 ?>
+<!--listeners -->
+<script>
+document.querySelectorAll('#tablePackage tr').forEach(e=>e.addEventListener("click",function(){
+    // console.log("clicked");
+    if(this.rowIndex > 0){
+        var pakId=this.cells[0].innerHTML;
+        var pakName=this.cells[1].innerHTML;
+        var pakDes=this.cells[2].innerHTML;
+        var pakPrice=this.cells[3].innerHTML;
+        // console.log(pakPrice);
+        document.forms['frmPackege']['txtPackageID'].value = pakId;
+        document.forms['frmPackege']['txtPackageName'].value = pakName;
+        document.forms['frmPackege']['txtPackageDes'].value = pakDes;
+        document.forms['frmPackege']['txtPrice'].value = pakPrice;
+    }
+   
+}));
+</script>

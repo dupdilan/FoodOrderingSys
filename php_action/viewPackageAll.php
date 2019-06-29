@@ -12,7 +12,7 @@
 				$nor =  mysqli_num_rows($exec);//Get the number of matching records.
 				if($nor>0)
 				{	
-					echo "<table id='table' border=1 width=100%>
+					echo "<table id='tablePackage' border=1 width=100%>
 						<tr>
 							<th height=50px >Package ID</th>
 							<th>Package Name</th>

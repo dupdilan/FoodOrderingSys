@@ -31,11 +31,18 @@ require_once("php_action/function.php");
     <link type="text/css"  rel="stylesheet" href="custom/css/customdash.css">
     <link type="text/css"  rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
      <link  type="text/css" rel="stylesheet" href="assets/jquery-ui/jquery-ui.min.css"> 
-     
+     <!-- aut refresh    -->
+    <script type = "text/JavaScript">
+         
+         function AutoRefresh( t ) {
+            setTimeout("location.reload(true);", t);
+         }
+      
+   </script>
     
     
   </head>
-    <body >
+    <body onload = "JavaScript:AutoRefresh(5000);" >
     <script src="assets/jquery/jquery-3.2.1.min.js"></script>
     <script src="assets/jquery-ui/jquery-ui.min.css"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

@@ -9,7 +9,7 @@
 									<a href="#"><i class="fa fa-twitter-square" style="font-size:40px"></i></a>
 								</div>
 								<div class="text-center" >
-									<p id="footerP" style="color:white;">© 2019 All rights reserved | Design by Indusrial Management Science Student Association</p>
+									<p id="footerP" style="color:white;">© 2019 All rights reserved | Design by IM Student</p>
 								</div>						
 							</div>
 						</div>
