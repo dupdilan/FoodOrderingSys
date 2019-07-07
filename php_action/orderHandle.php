@@ -29,6 +29,7 @@
         
         echo'alert("SUCCESS!!!!")';
 		header("Location:../order.php?success=1");
+		
         
 	}else{
         echo'alert("Fail!!!!")';

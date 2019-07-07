@@ -51,21 +51,26 @@
                                                //$('table#sHold tr#'+trid).remove();
                                                 alert('Updated the Status');
                                                 location.reload();
+                                               
 
                                         }
                                         });
                                     }
+                                   
                                     
                                     </script>
     
     
   </head>
-    <body onload = "JavaScript:AutoRefresh(5000);" >
+    <body  onload = "JavaScript:AutoRefresh(30000);" >
             <!-- aut refresh    -->
     <script type = "text/JavaScript">
          
          function AutoRefresh( t ) {
             setTimeout("location.reload(true);", t);
+            
+           
+            
          }
       
    </script>

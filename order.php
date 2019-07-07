@@ -11,8 +11,6 @@ require_once("php_action/function.php");
                                                                 $sql = "select MAX(orderID) from orderdetails ";
                                                                             $q = mysqli_query($con,$sql);
                                                                             $row = mysqli_fetch_array($q);
-                                                                        
-                                                                
                                                                             $maxid = $row[0]+1;
                                                                         //  echo $row['uid']  ; 
                                                                     
@@ -33,16 +31,17 @@ require_once("php_action/function.php");
      <link  type="text/css" rel="stylesheet" href="assets/jquery-ui/jquery-ui.min.css"> 
      <!-- aut refresh    -->
     <script type = "text/JavaScript">
-         
+        
          function AutoRefresh( t ) {
             setTimeout("location.reload(true);", t);
+           
          }
       
    </script>
     
     
   </head>
-    <body onload = "JavaScript:AutoRefresh(5000);" >
+    <body  onload = "JavaScript:AutoRefresh(30000);"  >
     <script src="assets/jquery/jquery-3.2.1.min.js"></script>
     <script src="assets/jquery-ui/jquery-ui.min.css"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -128,7 +127,7 @@ tr:nth-child(even){background-color: #f2f2f2}
                                         <div class="form-group">
                                             <label for="#" class="col-sm-3 control-label"> Order ID:</label>
                                             <div class="col-sm-6">
-                                            <input type="number" class="form-control" id="txtOrderId" disabled  name="txtOrderId" value="<?php echo $maxid; ?>" required>
+                                            <input type="number" class="form-control" id="txtOrderId" readonly name="txtOrderId" value="<?php echo $maxid; ?>" required>
                                             </div>
                                         </div>
 

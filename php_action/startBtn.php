@@ -6,9 +6,11 @@ $order_id=$status[1];
 
 if($status[0]=='btnStart'){
     $value='cooking';
+    header("Refresh:0; url=order.php");
 }
 elseif($status[0]=='btnCancel'){
     $value='canceled';
+    header("Refresh:0; url=order.php");
 }
     
 
